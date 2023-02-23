@@ -15,6 +15,7 @@
 ФИО автора и др
  */
 
+import tasks.Issue;
 import tasks.Task;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -23,10 +24,10 @@ public class Program {
 
     public static void main(String[] args) {
         Calendar calendar = new GregorianCalendar(2023, Calendar.FEBRUARY, 23);
-        Task task = new Task(5, calendar, "High", "Сделать домашнее задание"
-                , "Валентин", "");
-        Task task2 = new Task(10, calendar, "Low", "Бездельничать"
-                , "Валентин", "");
+        Issue task = new Issue(3, calendar, "High", "Сделать домашнее задание"
+                , "Валентин", "", "Станислав");
+        Issue task2 = new Issue(2, calendar, "Low", "Бездельничать"
+                , "Валентин", "", "Валентин");
         task.setNotificationDeadlineOn();
         Calendar calendar1 = new GregorianCalendar();
         task.deadlineNotification(calendar1);

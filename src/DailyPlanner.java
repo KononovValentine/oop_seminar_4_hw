@@ -12,7 +12,6 @@ public class DailyPlanner {
 
     // Добавляет новую задачу если она не пересекается по времени иначе выдает сообщение и спрашивает продолжение
     public void addTask(Task task) {
-        System.out.println(task.getDeadlineDate().getTime());
         if (taskList.isEmpty()) {
             taskList.add(task);
         } else {
